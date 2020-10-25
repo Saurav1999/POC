@@ -1,0 +1,790 @@
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    background-color: #fff;
+    color: #000000;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    
+    
+    
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header{
+    padding: 0;
+    margin: 0;
+    
+}
+/* section {
+    padding: 80px 0;
+} */
+
+.box {
+    padding: 1%;
+}
+
+.logobox1{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    margin-left: 5%;
+    padding-left: 2%;
+    padding-top: 0px;
+    padding-bottom: 1%;
+    margin-bottom: 0px;
+    height: 10%;
+}
+.logobox1 img{
+    display: inline-block;
+    width: auto;
+}
+
+
+.logobox2
+{
+    height: 100px;
+    width: auto;
+    float: right;
+    margin-top: 20px;
+    margin-right: 5%;
+    padding-right: 5%;
+    margin-bottom: 0px;
+    padding-bottom: 0.5%;
+    height: 10%;
+}
+.logobox2 img{
+    height: 60px;
+    display: inline-block;
+    width: auto;
+    
+}
+
+
+/*-----------------------------------------NAVBAR------------------------------------ */
+
+.icon-nav{
+    display: inline-block;
+    font-size: 50%;
+    margin-left: 6px;
+    font-weight: 300;
+    
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    /* background-color: linear-gradient(119.54deg,#000046 0%,#1CB5E0 100%); */
+    /* background-color: #000046; */
+    background: linear-gradient(119.54deg,#000046 0%,#1CB5E0 100%);
+    
+    font-weight: 400;
+    text-align: center;
+   
+    
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+
+  .nav-container{
+    margin: 0% 7%;
+
+  }
+  /* .nav-container a {
+    
+    float: left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 80%;
+    word-spacing: 0%;
+    
+  } */
+  
+  /* Add an active class to highlight the current page */
+  /* .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+   */
+  /* Hide the link that should open and close the topnav on small screens */
+
+  .ham-btn,.ham-btn:active{
+    
+    background-image: url(../../images/ic_menu.svg);
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 18px;
+    margin-top: 2px;
+    background-size: 27px;
+    border: none;
+    background-color: #7edcf7;
+    margin-left: 40%;
+    margin-right: 20%;
+    
+  }
+
+  .ham-btn a, .ham-btn a:active {
+   
+    text-decoration: none;
+  }
+ 
+ 
+  .topnav .icon {
+    
+    display: none;
+  }
+  
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+   
+  }
+  
+  
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    
+    text-align: center;
+    padding: 5px 14px 10px 5px;
+    text-decoration: none;
+    font-size: 80%;
+    word-spacing: 0%;
+    
+    border: none;
+    outline: none;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0px 12px;
+    
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 70%;
+  }
+
+
+  /* .topnav a:hover{
+
+    
+    border-bottom: 1px solid #fff;
+ 
+  } */
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+    .dropdown:hover .dropbtn {
+    border-bottom: 2px solid #fff;
+   
+    color: white;
+    padding-bottom: 10px;
+    
+  } 
+   
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 956px) {
+
+    html,
+    body {
+    
+    font-weight: 200;
+    font-size: 16px;
+   
+    }
+    .topnav {
+        background: linear-gradient(119.54deg, #7edcf7 0%, #000046 100%);
+        
+    }
+    .logobox1 img{
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+    }
+    .logobox2 img{
+        height: 40px;
+        display: inline-block;
+        width: auto;
+        
+    }
+    .topnav .dropdown {display: none;}
+    .topnav .icon  {
+      float: left;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 956px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .topnav.responsive  .dropdown {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+
+    html,
+    body {
+    
+    font-weight: 150;
+    font-size: 12px;
+   
+    }
+
+  }
+
+/*------------------------------------------------Quick Links---------------------------------------------*/
+.qlinks {
+  /* background-color: linear-gradient(119.54deg,#000046 0%,#1CB5E0 100%); */
+  /* background-color: #000046; */
+  background: #000046;
+  
+  font-weight: 400;
+  text-align: center;
+ 
+  
+  overflow: hidden;
+}
+
+.qlink-container{
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.qlink {
+  float: left;
+ 
+}
+
+
+.qlink .qlbtn {
+    
+  text-align: center;
+  padding: 10px 5px 10px 5px;
+  text-decoration: none;
+  font-size: 70%;
+  word-spacing: 0%;
+  
+  border: none;
+  outline: none;
+  color: white;
+  
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0px 5px;
+  
+}
+.icon-qlink{
+  display: inline-block;
+  font-size: 100%;
+  margin-left: 6px;
+  font-weight: 350;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  
+}
+
+.qlink .qlbtn:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1400px) {
+
+  .qlink .qlbtn {
+    
+    text-align: center;
+    padding: 7px 3px 7px 3px;
+    text-decoration: none;
+    font-size: 60%;
+    word-spacing: 0%;
+    
+    border: none;
+    outline: none;
+    color: white;
+    
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0px 5px;
+    
+  }
+  .icon-qlink{
+    display: inline-block;
+    font-size: 90%;
+    margin-left: 4px;
+    font-weight: 350;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    
+  }
+
+
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+  .qlink .qlbtn {
+    
+    text-align: center;
+    padding: 5px 2px 5px 2px;
+    text-decoration: none;
+    font-size: 50%;
+    word-spacing: 0%;
+    
+    border: none;
+    outline: none;
+    color: white;
+    
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0px 2px;
+    
+  }
+  .icon-qlink{
+    display: inline-block;
+    font-size: 70%;
+    margin-left: 3px;
+    font-weight: 350;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    
+  }
+  
+
+}
+
+
+/*------------------------------------------------Footer---------------------------------------------------*/
+.footer-div {
+  background-image: linear-gradient(119.54deg,rgba(0,0,70,.8),rgba(28,181,224,.8)),url(../../images/footer-bg.jpg);
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  object-fit: cover;
+  color: #fff;
+  
+
+}
+
+
+
+.footer-div h2 {
+    font-weight: 300;
+    font-size: 90%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    
+}
+.footer-div button {
+  font-weight: 300;
+  font-size: 90%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  letter-spacing: 1px;
+  
+}
+
+
+.footer-div h4 {
+  margin-top: 10%;
+  font-size: 85%;
+  
+}
+.footer-div h5 {
+  margin-top: 3%;
+  font-weight: 500;
+  
+}
+
+.footer-div p {
+  font-size: 90%;
+  font-weight: 300;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  
+}
+
+.footer-container .contact{
+
+  padding-right: 5%;
+}
+.social-icons img{
+  margin-top: 2%;
+  margin-right: 2%;
+}
+.footer-div .docs{
+
+  margin-top: 2.5%;
+  padding-left: 2%;
+}
+
+.footer-div .docs h5
+{
+  
+  margin-bottom: 10% ;
+}
+.footer-container div{
+
+  margin: 0.5%;
+}
+.footer-container .govlinks h4{
+  
+    margin-bottom: 10%;
+}
+.footer-container .govlinks h5{
+  
+  margin-bottom: 7%;
+}
+
+.social-icons{
+
+  margin-top: 5%;
+}
+.footer-container{
+
+  
+  float: none;
+  margin: 0 5% 0 5%;
+}
+.footer-container .address{
+
+  
+  margin-right: 2%;
+  padding-right: 7px;
+}
+.foot-btn{
+
+  display: block;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 7px;
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 818px){
+  .footer-div h2 {
+    font-weight: 300;
+    font-size: 75%;
+    word-spacing: 1px;
+   
+    margin-bottom: 20px;
+    
+    
+  }
+
+  .footer-div button {
+    font-weight: 350;
+    font-size: 60%;
+    word-spacing: 1px;
+    text-align: center;
+    margin-left: 1.5%;
+    margin-right: 2%;
+    
+    
+  }
+
+  .footer-div h4 {
+    margin-top: 7%;
+    font-size: 65%;
+    
+  }
+  .footer-div h5 {
+    margin-top: 2.5%;
+    font-weight: 400;
+    font-size: 60%;
+
+    
+  }
+  
+  .footer-div p {
+    font-size: 60%;
+    font-weight: 300;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    
+  }
+  .footer-container .contact{
+
+    padding-right: 3%;
+  }
+  .social-icons img{
+    margin-top: 1%;
+    margin-right: 1%;
+  }
+  .footer-div .docs{
+  
+    margin-top: 2%;
+    padding-left:1.5%;
+  }
+  
+  .footer-div .docs h5
+  {
+    
+    margin-bottom: 7% ;
+  }
+  .footer-container div{
+  
+    margin: 0.2%;
+  }
+  .footer-container .govlinks h4{
+    
+      margin-bottom: 7%;
+  }
+  .footer-container .govlinks h5{
+    
+    margin-bottom: 5%;
+  }
+  
+  .social-icons{
+  
+    margin-top: 3%;
+  }
+  .footer-container{
+  
+    
+    float: none;
+    margin: 0 3% 0 3%;
+  }
+  
+  .foot-btn{
+  
+    display: block;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding:3px 5px;
+    margin-top: 4%;
+  }
+
+}
+@media only screen and (max-width: 548px){
+
+  .foot-btn{
+  
+    display: block;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding:2px 3px;
+    margin-top: 4%;
+  }
+
+}
+
+
+
+/* ------------------------------------------------ HEADINGS ----------------------------------------------- */
+/* h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+} */
+/* -----------------------------------------Slides------------------------------------- */
+.mySlides {display: none}
+.slideshow-container img {vertical-align: middle;
+  background-size: cover;
+  max-height: 400px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
